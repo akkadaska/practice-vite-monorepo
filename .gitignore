@@ -1,0 +1,11 @@
+node_modules/
+/packages/*/dist/
+dist
+
+.vscode/
+.idea/
+*.swp
+*~
+
+.DS_Store
+Thumbs.db

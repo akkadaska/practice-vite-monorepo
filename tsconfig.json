@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "ES2019",
+    "lib": ["esnext", "dom", "dom.iterable"],
+    "module": "esnext",
+    "jsx": "react-jsx",
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+    "downlevelIteration": true,
+    "noEmit": true,
+    "strict": true,
+    "baseUrl": ".",
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "paths": {
+      "@practice-vite-monorepo/fruit": ["packages/fruit/src"]
+    }
+  },
+  "include": ["src/**/*", "packages/**/src/**/*", ".eslintrc.js", "vite.config.js", "vite.config.prod.js", "packages/fruit/vite.config.js"],
+  "exclude": [
+    "node_modules"
+  ]
+}
