@@ -4,6 +4,7 @@ import { resolve } from 'path';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  root: resolve(__dirname, 'src'),
   plugins: [
     react(),
     {
@@ -17,7 +18,7 @@ export default defineConfig({
         ) {
           // 開発中のみCSSファイルのインポートを無効化する
           const updatedCode = code.replace(
-            /import\s+(['"]@practice-vite-monorepo\/fruit\/.*?\.css['"]);/g,
+            /import\s+(['"]@fruit\/.*?\.css['"]);/g,
             '//$&',
           );
           return {
@@ -30,10 +31,7 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      '@practice-vite-monorepo/fruit': resolve(
-        __dirname,
-        './packages/fruit/src/',
-      ),
+      '@fruit': resolve(__dirname, './packages/fruit/src/'),
     },
   },
 });

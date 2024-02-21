@@ -1,5 +1,6 @@
 node_modules/
-/packages/*/dist/
+/packages/fruit/dist/
+/packages/fruit/styles/
 dist
 
 .vscode/

@@ -2,9 +2,11 @@
   "name": "@practice-vite-monorepo/fruit",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/fruit.js",
+  "main": "dist/index.js",
   "scripts": {
-    "build": "vite build --mode=production"
+    "build": "yarn build:js && yarn build:css",
+    "build:js": "vite build --config vite.config.javascript.js --mode=production && rimraf dist/*.css",
+    "build:css": "vite build --config vite.config.css.js --mode=production && rimraf styles/*.js"
   },
   "keywords": [],
   "author": "",
@@ -12,6 +14,7 @@
   "devDependencies": {
     "@types/uuid": "^9.0.8",
     "@vitejs/plugin-react": "^4.2.1",
+    "rimraf": "^5.0.5",
     "sass": "^1.71.0",
     "vite": "^5.1.3"
   },

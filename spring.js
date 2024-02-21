@@ -7,7 +7,19 @@ const port = 3000;
 
 http.createServer((req, res) => {
   if(req.url === '/') {
-    fs.readFile(path.join(__dirname, 'spring.html'), (err, data) => {
+    fs.readFile(path.join(__dirname, 'spring/index.html'), (err, data) => {
+      if(err) {
+        res.statusCode = 500;
+        res.setHeader('Content-Type', 'text/plain');
+        res.end('Error loading a.html');
+        return;
+      }
+      res.statusCode = 200;
+      res.setHeader('Content-Type', 'text/html');
+      res.end(data);
+    });
+  } else if(req.url === '/foo/bar') {
+    fs.readFile(path.join(__dirname, 'spring/foo/bar.html'), (err, data) => {
       if(err) {
         res.statusCode = 500;
         res.setHeader('Content-Type', 'text/plain');

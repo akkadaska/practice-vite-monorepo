@@ -13,10 +13,10 @@
     "skipLibCheck": true,
     "resolveJsonModule": true,
     "paths": {
-      "@practice-vite-monorepo/fruit": ["packages/fruit/src"]
+      "@fruit": ["packages/fruit/src"],
     }
   },
-  "include": ["src/**/*", "packages/**/src/**/*", ".eslintrc.js", "vite.config.js", "vite.config.prod.js", "packages/fruit/vite.config.js"],
+  "include": ["src/**/*", "packages/**/src/**/*", ".eslintrc.js", "vite.config.js", "vite.config.prod.js", "packages/fruit/vite.config.common.js", "packages/fruit/vite.config.javascript.js", "packages/fruit/vite.config.css.js"],
   "exclude": [
     "node_modules"
   ]
